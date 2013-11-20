@@ -12,6 +12,7 @@ class App.Views.Content extends Backbone.View
     @listenTo App.Vent, "project:create", @swapMainToEmpty
     @listenTo App.Vent, "project:new", @swapMainToNewProject
     @listenTo App.Vent, "project:show", @projectShow
+    @listenTo App.Vent, "project:destroy", @swapMainToEmpty
   
   swapMainToEmpty: ->
     @swapMain(new App.Views.Empty())
